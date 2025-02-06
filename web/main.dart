@@ -35,7 +35,7 @@ web.HTMLImageElement makeCrownElem() {
   final crownLogo = web.document.createElement('img') as web.HTMLImageElement
     ..alt = 'crown'
     ..className = 'crown'
-    ..src = '/assets/crown.svg';
+    ..src = 'assets/crown.svg';
 
   return crownLogo;
 }
@@ -55,7 +55,7 @@ web.HTMLDivElement makeFinishedGoalElem(final Goal goal) {
   final crown = makeCrownElem();
 
   final logoSrc =
-      goal.icon.startsWith('https://') ? goal.icon : '/assets/${goal.icon}';
+      goal.icon.startsWith('https://') ? goal.icon : 'assets/${goal.icon}';
 
   final logo = web.document.createElement('img') as web.HTMLImageElement
     ..alt = goal.icon
@@ -85,7 +85,7 @@ web.HTMLDivElement makePendingGoalElem(final Goal goal) {
     );
 
   final logoSrc =
-      goal.icon.startsWith('https://') ? goal.icon : '/assets/${goal.icon}';
+      goal.icon.startsWith('https://') ? goal.icon : 'assets/${goal.icon}';
 
   final logo = web.document.createElement('img') as web.HTMLImageElement
     ..alt = goal.icon
@@ -121,7 +121,7 @@ final class Goal {
 Future<List<Goal>> getGoals({final bool toSort = false}) async {
   final goals = <Goal>[];
 
-  final jsonFile = await web.window.fetch('/goals.json'.toJS).toDart;
+  final jsonFile = await web.window.fetch('goals.json'.toJS).toDart;
   final jsonText = (await jsonFile.text().toDart).toDart;
 
   final listJson = (jsonDecode(jsonText) as List).cast<Map<String, dynamic>>();
