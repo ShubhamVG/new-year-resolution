@@ -30,12 +30,6 @@
   initial-value: #5f5f5f;
 }
 
-@property --year-progress-body-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #50576E;
-}
-
 :root {
   font-family: 'Roboto', sans-serif;
   color-scheme: dark;
