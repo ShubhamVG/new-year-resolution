@@ -60,9 +60,9 @@ body {
   height: 2rem;
   width: 2rem;
 
-  rotate: 50deg;
-  right: -1rem;
-  top: 0;
+  rotate: 45deg;
+  right: -0.9rem;
+  top: -0.9rem;
 }
 
 .font-large {
@@ -73,26 +73,26 @@ body {
   align-items: center;
   display: flex;
   padding: 0.5rem;
-  position: relative;
   width: 100%;
 }
 
 .goal-logo {
+  border-radius: 9999rem;
   height: 80%;
   width: 80%;
-  border-radius: 9999rem;
 }
 
 .goal-progress {
   align-items: center;
   background: conic-gradient(var(--progress-color) var(--progress, 0%),
       var(--progress-shell-color) var(--progress, 0%) 100%);
-  border-radius: 100%;
+  border-radius: 9999rem;
   box-shadow: 0 0 1rem var(--aurora-color);
   display: flex;
   height: 3.5rem;
   justify-content: center;
   width: 3.5rem;
+  position: relative;
 }
 
 .goal-text {
@@ -172,12 +172,16 @@ main {
 
 @media (max-width: 50rem) {
   .goal {
-    width: 80%;
+    width: fit-content;
   }
 
   .goal:nth-child(even) {
     margin-left: auto;
     margin-right: 0;
+  }
+
+  .goal-text {
+    width: 70%;
   }
 
   .goals-container {
@@ -190,6 +194,14 @@ main {
 }
 
 @media (max-width: 39rem) {
+  .goal {
+    width: 80%;
+  }
+
+  .goal-text {
+    width: calc(90% - 5rem);
+  }
+
   #year-container {
     display: block;
   }
