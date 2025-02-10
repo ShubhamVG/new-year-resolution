@@ -15,13 +15,13 @@
 @property --ball-color2 {
   syntax: "<image>";
   inherits: false;
-  initial-value: radial-gradient(circle, hsla(147, 100%, 36%, 1) 0%, hsla(194, 83%, 26%, 0) 50%);
+  initial-value: radial-gradient(circle, rgb(19, 141, 94) 0%, hsla(194, 83%, 26%, 0) 50%);
 }
 
 @property --ball-color3 {
   syntax: "<image>";
   inherits: false;
-  initial-value: radial-gradient(circle, hsla(147, 100%, 36%, 1) 0%, hsla(194, 83%, 26%, 0) 50%);
+  initial-value: radial-gradient(circle, rgb(8, 190, 160) 0%, hsla(194, 83%, 26%, 0) 50%);
 }
 
 @property --ball-size {
