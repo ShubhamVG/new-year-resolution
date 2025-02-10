@@ -18,6 +18,23 @@
 </head>
 
 <body>
+  <div id="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div id="gradients">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+    </div>
+  </div>
+
   <main>
     <div id="year-container">
       <div id="year-progress"><span>2025's goals</span></div>
@@ -27,8 +44,15 @@
       </div>
     </div>
 
-    <div id="pending-goals-container" class="goals-container"></div>
-    <div id="finished-goals-container" class="goals-container"></div>
+    <div class="goals-wrapper">
+      <p class="goals-category-title">Goals in progress:</p>
+      <div id="pending-goals-container" class="goals-container"></div>
+    </div>
+
+    <div class="goals-wrapper">
+      <p class="goals-category-title">Goals finished so far:</p>
+      <div id="finished-goals-container" class="goals-container"></div>
+    </div>
   </main>
 
   <footer>Made by <a href="https://github.com/ShubhamVG">LaV</a></footer>
